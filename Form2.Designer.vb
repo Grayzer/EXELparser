@@ -22,6 +22,7 @@ Partial Class Form2
     'Не изменяйте ее в редакторе исходного кода.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -31,6 +32,7 @@ Partial Class Form2
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'ListBox1
@@ -40,6 +42,7 @@ Partial Class Form2
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(141, 420)
         Me.ListBox1.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.ListBox1, "Список активных процессов для выбора активного окна")
         '
         'TextBox1
         '
@@ -102,6 +105,7 @@ Partial Class Form2
         Me.Button1.Size = New System.Drawing.Size(185, 23)
         Me.Button1.TabIndex = 7
         Me.Button1.Text = "Get PID from RDP"
+        Me.ToolTip1.SetToolTip(Me.Button1, "Ищет процесс окна RDP (удаленный рабочий стол)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "и берет его PID")
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -111,7 +115,12 @@ Partial Class Form2
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 8
         Me.Button2.Text = "GET"
+        Me.ToolTip1.SetToolTip(Me.Button2, "Взять установленный PID в работу")
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'ToolTip1
+        '
+        Me.ToolTip1.IsBalloon = True
         '
         'Form2
         '
@@ -147,4 +156,5 @@ Partial Class Form2
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

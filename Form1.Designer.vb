@@ -45,18 +45,26 @@ Partial Class Form1
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Button11 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -70,22 +78,24 @@ Partial Class Form1
         '
         'Button2
         '
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button2.Location = New System.Drawing.Point(230, 298)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(85, 23)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Run"
+        Me.ToolTip1.SetToolTip(Me.Button2, "Запуск переноса данных в активное окно")
         Me.Button2.UseVisualStyleBackColor = True
         '
         'TextBox2
         '
-        Me.TextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox2.Location = New System.Drawing.Point(6, 35)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TextBox2.Size = New System.Drawing.Size(218, 286)
         Me.TextBox2.TabIndex = 3
+        Me.TextBox2.WordWrap = False
         '
         'TextBox3
         '
@@ -127,6 +137,7 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.Enabled = False
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button1.Location = New System.Drawing.Point(6, 6)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(51, 23)
@@ -137,6 +148,7 @@ Partial Class Form1
         'Button3
         '
         Me.Button3.Enabled = False
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button3.Location = New System.Drawing.Point(230, 34)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
@@ -147,6 +159,7 @@ Partial Class Form1
         'Button4
         '
         Me.Button4.Enabled = False
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button4.Location = New System.Drawing.Point(230, 63)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
@@ -156,11 +169,13 @@ Partial Class Form1
         '
         'Button5
         '
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button5.Location = New System.Drawing.Point(230, 117)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(204, 23)
         Me.Button5.TabIndex = 11
         Me.Button5.Text = "Get process"
+        Me.ToolTip1.SetToolTip(Me.Button5, "Открывает окно списка активный процессов для выбора PID (Process ID)")
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Label1
@@ -264,6 +279,17 @@ Partial Class Form1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Type"
         '
+        'RadioButton4
+        '
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.Location = New System.Drawing.Point(6, 34)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(77, 17)
+        Me.RadioButton4.TabIndex = 1
+        Me.RadioButton4.Text = "Art / Name"
+        Me.ToolTip1.SetToolTip(Me.RadioButton4, "Режим артикулов или названий. Ограничение на длинну строки отсутствуют.")
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        '
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
@@ -274,25 +300,18 @@ Partial Class Form1
         Me.RadioButton3.TabIndex = 0
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "Code"
+        Me.ToolTip1.SetToolTip(Me.RadioButton3, resources.GetString("RadioButton3.ToolTip"))
         Me.RadioButton3.UseVisualStyleBackColor = True
-        '
-        'RadioButton4
-        '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(6, 34)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(77, 17)
-        Me.RadioButton4.TabIndex = 1
-        Me.RadioButton4.Text = "Art / Name"
-        Me.RadioButton4.UseVisualStyleBackColor = True
         '
         'Button6
         '
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button6.Location = New System.Drawing.Point(346, 298)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(89, 23)
         Me.Button6.TabIndex = 19
         Me.Button6.Text = "Quit"
+        Me.ToolTip1.SetToolTip(Me.Button6, "Выход из программы")
         Me.Button6.UseVisualStyleBackColor = True
         '
         'GroupBox3
@@ -312,7 +331,7 @@ Partial Class Form1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(2, 1)
+        Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(449, 353)
@@ -347,6 +366,13 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.TabPage2.Controls.Add(Me.Label7)
+        Me.TabPage2.Controls.Add(Me.Button11)
+        Me.TabPage2.Controls.Add(Me.Button10)
+        Me.TabPage2.Controls.Add(Me.Button9)
+        Me.TabPage2.Controls.Add(Me.Button8)
+        Me.TabPage2.Controls.Add(Me.Button7)
+        Me.TabPage2.Controls.Add(Me.ListBox1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -354,18 +380,102 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Input"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(204, Byte))
+        Me.Label7.Location = New System.Drawing.Point(400, 285)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(35, 37)
+        Me.Label7.TabIndex = 18
+        Me.Label7.Text = "5"
+        Me.Label7.Visible = False
+        '
+        'Button10
+        '
+        Me.Button10.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button10.Location = New System.Drawing.Point(347, 97)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(88, 23)
+        Me.Button10.TabIndex = 4
+        Me.Button10.Text = "Load"
+        Me.ToolTip1.SetToolTip(Me.Button10, "Загрузить список из файла SaveWork.txt")
+        Me.Button10.UseVisualStyleBackColor = False
+        '
+        'Button9
+        '
+        Me.Button9.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button9.Location = New System.Drawing.Point(347, 67)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(88, 23)
+        Me.Button9.TabIndex = 3
+        Me.Button9.Text = "Save"
+        Me.ToolTip1.SetToolTip(Me.Button9, "Сохраняет текущий список в файл SaveWork.txt" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Файл перезаписывается, а не дописыв" &
+        "ается.")
+        Me.Button9.UseVisualStyleBackColor = False
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button8.Location = New System.Drawing.Point(347, 37)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(88, 23)
+        Me.Button8.TabIndex = 2
+        Me.Button8.Text = "Send"
+        Me.ToolTip1.SetToolTip(Me.Button8, "Отправляет текущий список во вкладку Output")
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button7.Location = New System.Drawing.Point(347, 7)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(88, 23)
+        Me.Button7.TabIndex = 1
+        Me.Button7.Text = "Get"
+        Me.ToolTip1.SetToolTip(Me.Button7, "Скопировать в список построчно данные из активного окна." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Метод использует симуля" &
+        "цию Ctrl+C и CursorDown." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Передвижение курсора идет до упора в низ." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "После чего " &
+        "считывание останавливается.")
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(6, 6)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended
+        Me.ListBox1.Size = New System.Drawing.Size(334, 316)
+        Me.ListBox1.TabIndex = 0
+        '
+        'Button11
+        '
+        Me.Button11.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button11.Location = New System.Drawing.Point(347, 126)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(88, 23)
+        Me.Button11.TabIndex = 4
+        Me.Button11.Text = "Clear"
+        Me.ToolTip1.SetToolTip(Me.Button11, "Очистить текущий список.")
+        Me.Button11.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.ClientSize = New System.Drawing.Size(461, 365)
+        Me.ClientSize = New System.Drawing.Size(474, 378)
         Me.ControlBox = False
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form1"
-        Me.Text = "EXELparser"
+        Me.Text = "Parser"
         Me.TopMost = True
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -376,6 +486,8 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -407,4 +519,11 @@ Partial Class Form1
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents Button10 As Button
+    Friend WithEvents Button9 As Button
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Button11 As Button
 End Class
