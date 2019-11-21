@@ -1,11 +1,20 @@
-﻿Imports System.Diagnostics.Process
-Public Class Form1
+﻿Public Class Form1
 
-    Friend PID As New Integer
     Friend AppID As String
     Friend Hndl As New Integer
     Friend namefile As String = ".\SaveWork.txt"
+    Friend PID As New Integer
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        ListBox1.Items.Clear()
+        ListBox1.Items.AddRange(IO.File.ReadAllLines(namefile, System.Text.Encoding.UTF8))
+        Beep()
 
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        ListBox1.Items.Clear()
+        Beep()
+    End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim nnn As New Integer
@@ -61,44 +70,12 @@ skipaem:    System.Threading.Thread.Sleep(ppp)
         Beep()
         Label5.Text = "0"
 
-
     End Sub
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load, TextBox2.TextChanged
-
-        If IO.File.Exists(namefile) = True Then Button10.Enabled = True Else Button10.Enabled = False
-
-        Label3.Text = TextBox2.Lines.Count
-        'TextBox4.Text = Process.GetCurrentProcess.ProcessName
-        'TextBox1.Text = Process.GetCurrentProcess.Id.ToString
-        'TextBox5.Text = Form1.ActiveForm.Handle.ToString
-    End Sub
-
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
-        If RadioButton1.Checked = True Then
-            RadioButton2.Checked = False
-        End If
-    End Sub
-
-    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
-        If RadioButton2.Checked = True Then
-            RadioButton1.Checked = False
-        End If
-    End Sub
-
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Me.TopMost = False
         Form2.Visible = True
         Form2.Activate()
-    End Sub
-
-    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
-        If RadioButton3.Checked = True Then RadioButton4.Checked = False
-    End Sub
-
-    Private Sub RadioButton4_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton4.CheckedChanged
-        If RadioButton4.Checked = True Then RadioButton3.Checked = False
     End Sub
 
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
@@ -161,15 +138,32 @@ konec:  Beep()
 
     End Sub
 
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        ListBox1.Items.Clear()
-        ListBox1.Items.AddRange(IO.File.ReadAllLines(namefile, System.Text.Encoding.UTF8))
-        Beep()
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load, TextBox2.TextChanged
 
+        If IO.File.Exists(namefile) = True Then Button10.Enabled = True Else Button10.Enabled = False
+
+        Label3.Text = TextBox2.Lines.Count
+        'TextBox4.Text = Process.GetCurrentProcess.ProcessName
+        'TextBox1.Text = Process.GetCurrentProcess.Id.ToString
+        'TextBox5.Text = Form1.ActiveForm.Handle.ToString
     End Sub
 
-    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        ListBox1.Items.Clear()
-        Beep()
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+        If RadioButton1.Checked = True Then
+            RadioButton2.Checked = False
+        End If
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        If RadioButton2.Checked = True Then
+            RadioButton1.Checked = False
+        End If
+    End Sub
+    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
+        If RadioButton3.Checked = True Then RadioButton4.Checked = False
+    End Sub
+
+    Private Sub RadioButton4_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton4.CheckedChanged
+        If RadioButton4.Checked = True Then RadioButton3.Checked = False
     End Sub
 End Class
