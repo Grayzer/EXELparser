@@ -39,7 +39,7 @@
         Dim num As Integer
         num = ListBox1.SelectedIndex
         TextBox1.Text = PID_List.Item(num).ToString
-        TextBox1.Refresh()
+        'TextBox1.Refresh()
         'TextBox2.Refresh()
         'TextBox2.Text = Hndl_List.Item(num)
 

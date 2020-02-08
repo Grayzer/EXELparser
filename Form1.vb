@@ -41,7 +41,7 @@
             System.Threading.Thread.Sleep(ppp)
             SendKeys.SendWait("{insert}")
             System.Threading.Thread.Sleep(ppp)
-            mmm = Trim(TextBox2.Lines(nnn - 1))
+            mmm = Trim(TextBox2.Lines(nnn - 1).ToString)
             If RadioButton3.Checked = True Then
                 If mmm.Length > 10 Then mmm = Strings.Left(mmm, 10)
                 If mmm.Length < 10 Then
@@ -65,7 +65,7 @@ skipaem:    System.Threading.Thread.Sleep(ppp)
 
             'TextBox2.Refresh()
         Next
-        TextBox2.Refresh()
+        'TextBox2.Refresh()
         Clipboard.Clear()
         Beep()
         Label5.Text = "0"
@@ -93,7 +93,7 @@ skipaem:    System.Threading.Thread.Sleep(ppp)
 
         For zzz = 1 To 5
             Label7.Text = (6 - zzz).ToString
-            Label7.Refresh()
+            'Label7.Refresh()
             System.Threading.Thread.Sleep(2000)
         Next
         Beep()
